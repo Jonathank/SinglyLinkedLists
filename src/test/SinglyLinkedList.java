@@ -41,6 +41,7 @@ private static class Node<E>{
 	public E firstelement() {
 		if(isEmpty())
 			return null;
+		
 		return head.getElement();
 	}
 	//return last element
@@ -56,6 +57,7 @@ private static class Node<E>{
 		Node<E>newnode = new Node<>(newest,head);
 		if(isEmpty())
 			head = tail=newnode;
+		
 		newnode.setNext(head);
 		head = newnode;
 		size++;
@@ -68,6 +70,7 @@ private static class Node<E>{
 		Node<E>newnode = new Node<>(newest,null);
 		if(isEmpty())
 			tail=head=newnode;
+		//first set the null reference to the newnode
 		newnode.setNext(null);
 		tail.setNext(newnode);
 		tail = newnode;
